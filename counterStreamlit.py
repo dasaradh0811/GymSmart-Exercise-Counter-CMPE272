@@ -233,7 +233,6 @@ def startTrainer():
 
 if __name__ == '__main__':
     while run:
-        stop = st.button('End')
         curlCOunter()
     while runT:
         reset2 = st.button('Stop')

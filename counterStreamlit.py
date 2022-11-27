@@ -165,7 +165,7 @@ def curlCOunter():
 
 
 def startTrainer():
-    cap = cv2.VideoCapture(0)
+    cap = cv2.VideoCapture(-1)
      
     detector = pm.poseDetector()
     count = 0
@@ -234,8 +234,8 @@ if __name__ == '__main__':
         reset = st.button('Stop')
         curlCOunter()
     while runT:
-        reset = st.button('Stop')
-        if(reset):
+        reset2 = st.button('Stop')
+        if(reset2):
             count = 0
         startTrainer()
     else:

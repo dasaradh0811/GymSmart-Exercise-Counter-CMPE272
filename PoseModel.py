@@ -79,7 +79,7 @@ class poseDetector():
         return angle
  
 def main():
-    cap = cv2.VideoCapture(0)
+    cap = cv2.VideoCapture(-1)
     pTime = 0
     detector = poseDetector()
     while True:

@@ -77,7 +77,7 @@ def curlCOunter():
     right_count = 0
     left_count = 0       
 
-    cap = cv2.VideoCapture(0)
+    cap = cv2.VideoCapture(-1)
     # Landmark detection model instance
     pose = mp_pose.Pose(min_detection_confidence=0.7, min_tracking_confidence=0.5) 
     while cap.isOpened():

@@ -161,7 +161,7 @@ def curlCOunter():
             right_count = 0
 
     cap.release()
-    cv2.destroyAllWindows()
+    #cv2.destroyAllWindows()
 
 
 def startTrainer():
@@ -173,7 +173,7 @@ def startTrainer():
     pTime = 0
     while True:
         success, img = cap.read()
-        img = cv2.resize(img, (1280, 720))
+        #img = cv2.resize(img, (1280, 720))
         # img = cv2.imread("AiTrainer/test.jpg")
         img = detector.findPose(img, False)
         lmList = detector.findPosition(img, False)

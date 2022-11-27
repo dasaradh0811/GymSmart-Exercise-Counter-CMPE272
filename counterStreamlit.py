@@ -63,8 +63,6 @@ def calculate_angle(a,b,c):
 
 
 def curlCOunter():
-    reset = st.button('Stop')
-
     # Connecting Keypoints Visuals
     mp_drawing = mp.solutions.drawing_utils     
 

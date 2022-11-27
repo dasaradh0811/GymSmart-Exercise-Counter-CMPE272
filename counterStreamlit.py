@@ -77,7 +77,7 @@ def curlCOunter():
     right_count = 0
     left_count = 0       
 
-    cap = cv2.VideoCapture(-1)
+    cap = cv2.VideoCapture(0)
     # Landmark detection model instance
     pose = mp_pose.Pose(min_detection_confidence=0.7, min_tracking_confidence=0.5) 
     while cap.isOpened():
@@ -161,7 +161,7 @@ def curlCOunter():
             right_count = 0
 
     cap.release()
-    #cv2.destroyAllWindows()
+    cv2.destroyAllWindows()
 
 
 def startTrainer():
@@ -173,7 +173,7 @@ def startTrainer():
     pTime = 0
     while True:
         success, img = cap.read()
-        #img = cv2.resize(img, (1280, 720))
+        img = cv2.resize(img, (1280, 720))
         # img = cv2.imread("AiTrainer/test.jpg")
         img = detector.findPose(img, False)
         lmList = detector.findPosition(img, False)
@@ -231,10 +231,11 @@ def startTrainer():
 
 if __name__ == '__main__':
     while run:
+        reset = st.button('Stop')
         curlCOunter()
     while runT:
-        reset2 = st.button('Stop')
-        if(reset2):
+        reset = st.button('Stop')
+        if(reset):
             count = 0
         startTrainer()
     else:
